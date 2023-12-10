@@ -10,12 +10,14 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-from pathlib import Path
 import os
+from pathlib import Path
+import django
+from django.core.wsgi import get_wsgi_application
+from django.contrib.messages import constants as messages
 import dj_database_url
-
 if os.path.isfile("env.py"):
-   import env
+    import env
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -33,7 +35,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-camdah77-artspot-gv6wiroobc0.ws-eu106.gitpod.io',
                 'https://git.heroku.com/artspot.git',
-                'artspot-0f88a4f955f2.herokuapp.com/',
+                'artspot-0f88a4f955f2.herokuapp.com',
                 'https://artspot-0f88a4f955f2.herokuapp.com/',
                 'https://artspot.herokuapp.com/', 'localhost']
 

@@ -44,6 +44,7 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 ALLOWED_HOSTS = ['8000-camdah77-artspot-gv6wiroobc0.ws-eu106.gitpod.io',
+                 'http://myip:8000/',
                  'http://8000-camdah77-artspot-gv6wiroobc0.ws-eu106.gitpod.io',
                 'https://git.heroku.com/artspot.git',
                 'artspot-0f88a4f955f2.herokuapp.com',

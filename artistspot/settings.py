@@ -24,10 +24,21 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
-
+import django
+from django.core.wsgi import get_wsgi_application
+from django.contrib.messages import constants as messages
 import dj_database_url
 if os.path.isfile("env.py"):
     import env
+
+
+django.setup()
+application = get_wsgi_application()
+
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -43,12 +54,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
-ALLOWED_HOSTS = ['8000-camdah77-artspot-gv6wiroobc0.ws-eu106.gitpod.io',
-                'https://8000-camdah77-artspot-gv6wiroobc0.ws-eu106.gitpod.io',
-                'https://git.heroku.com/artspot.git',
-                'artspot-0f88a4f955f2.herokuapp.com',
-                'https://artspot-0f88a4f955f2.herokuapp.com/',
-                'https://artspot.herokuapp.com/', 'localhost']
+ALLOWED_HOSTS = ["8000-camdah77-artspot-gv6wiroobc0.ws-eu106.gitpod.io",
+                "https://8000-camdah77-artspot-gv6wiroobc0.ws-eu106.gitpod.io",
+                "https://git.heroku.com/artspot.git",
+               "artspot-0f88a4f955f2.herokuapp.com",
+                "https://artspot-0f88a4f955f2.herokuapp.com/",
+                "https://artspot.herokuapp.com/",  "localhost"]
 
 CSRF_TRUSTED_ORIGINS = ["https://artspot-0f88a4f955f2.herokuapp.com/", 
                          "artspot-0f88a4f955f2.herokuapp.com"]
@@ -56,7 +67,7 @@ CSRF_TRUSTED_ORIGINS = ["https://artspot-0f88a4f955f2.herokuapp.com/",
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'django.contrib.auth',
+     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',

@@ -12,21 +12,14 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
-import django
-from django.core.wsgi import get_wsgi_application
-from django.contrib.messages import constants as messages
+
 import dj_database_url
 if os.path.isfile("env.py"):
     import env
 
-django.setup()
-application = get_wsgi_application()
-
-
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -52,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.contenttypes.models.ContentType'
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.sites',

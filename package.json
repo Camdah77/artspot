@@ -1,11 +1,16 @@
+
 {
-  "dependencies": {
-    "cloudinary": "^1.41.0"
-  },
   "name": "artspot",
-  "description": "![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)",
   "version": "1.0.0",
+  "description": "![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)",
   "main": "index.js",
+  "dependencies": {
+    "cloudinary-core": "^2.13.0",
+    "cloudinary": "^1.41.0",
+    "core-js": "^3.34.0",
+    "lodash": "^4.17.21",
+    "q": "^1.5.1"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

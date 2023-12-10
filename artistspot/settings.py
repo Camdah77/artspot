@@ -19,6 +19,10 @@ import dj_database_url
 if os.path.isfile("env.py"):
     import env
 
+django.setup()
+application = get_wsgi_application()
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -33,13 +37,15 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 ALLOWED_HOSTS = ['8000-camdah77-artspot-gv6wiroobc0.ws-eu106.gitpod.io',
                 'https://git.heroku.com/artspot.git',
                 'artspot-0f88a4f955f2.herokuapp.com',
                 'https://artspot-0f88a4f955f2.herokuapp.com/',
                 'https://artspot.herokuapp.com/', 'localhost']
 
-
+CSRF_TRUSTED_ORIGINS = ["https://artspot-0f88a4f955f2.herokuapp.com/", 
+                         "artspot-0f88a4f955f2.herokuapp.com"]
 # Application definition
 
 INSTALLED_APPS = [
@@ -76,7 +82,7 @@ ROOT_URLCONF = 'artistspot.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS':  [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -90,7 +96,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'artistspot.wsgi.application'
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases

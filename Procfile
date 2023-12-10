@@ -1,1 +1,1 @@
-web: gunicorn artistspot.wsgi
+web: gunicorn artistspot.wsgi --bind 5450:${PORT}

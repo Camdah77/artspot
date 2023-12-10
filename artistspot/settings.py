@@ -32,7 +32,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-camdah77-artspot-gv6wiroobc0.ws-eu106.gitpod.io',
-                'https://git.heroku.com/artspot.git', 
+                'https://git.heroku.com/artspot.git',
+                'artspot-0f88a4f955f2.herokuapp.com/',
                 'https://artspot-0f88a4f955f2.herokuapp.com/',
                 'https://artspot.herokuapp.com/', 'localhost']
 

@@ -1,5 +1,24 @@
 {
   "dependencies": {
     "cloudinary": "^1.41.0"
-  }
+  },
+  "name": "artspot",
+  "description": "![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Camdah77/artspot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Camdah77/artspot/issues"
+  },
+  "homepage": "https://github.com/Camdah77/artspot#readme"
 }

@@ -1,1 +1,1 @@
-web: gunicorn artspot.wsgi
+web: gunicorn artistspot.wsgi

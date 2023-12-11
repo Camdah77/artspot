@@ -2,7 +2,7 @@
 
 import cloudinary.models
 from django.conf import settings
-from django.db import migrations, models
+from django.db import migrations, models, connections
 import django.db.models.deletion
 
 
@@ -50,3 +50,5 @@ class Migration(migrations.Migration):
             },
         ),
     ]
+
+connections.close_all()

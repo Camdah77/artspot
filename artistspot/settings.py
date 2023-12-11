@@ -64,10 +64,11 @@ CSRF_TRUSTED_ORIGINS = ["https://artspot-0f88a4f955f2.herokuapp.com/",
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-     'django.contrib.auth',
+    'django.contrib.auth',
     'django.contrib.contenttypes',
-     'django.contrib.sessions',
+    'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
